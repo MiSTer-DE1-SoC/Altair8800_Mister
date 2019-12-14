@@ -357,7 +357,7 @@ wire clk_ctl;
 
 wire iHdmiClk = ~HDMI_TX_CLK;			// Internal HDMI clock, inverted in relation to external clock
 
-`ifndef LITE
+/*`ifndef LITE
 
 wire reset;
 vip vip
@@ -458,11 +458,11 @@ vip_config vip_config
 	.waitrequest(ctl_waitrequest)
 );
 `endif
-
+*/
 
 /////////////////////////  Lite version  ////////////////////////////////
 
-`ifdef LITE
+//`ifdef LITE
 
 wire reset;
 sysmem_lite sysmem
@@ -623,7 +623,7 @@ always @(posedge clk_vid) begin
 	endcase
 end
 
-`endif
+//`endif
 
 
 /////////////////////////  HDMI output  /////////////////////////////////
